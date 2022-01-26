@@ -1,0 +1,31 @@
+{
+  "{vendor}-{uuApp}-{uuSubApp}": {
+    "useCaseMap": {
+      "sys/uuAppWorkspace/init": {
+        "realization": "api/controllers/ErasmusMainController.init",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "defaultUve": {
+        "realization": "index.html",
+        "httpMethod": "GET",
+        "type": "UVE"
+      },
+      "sys/uuAppWorkspace/initUve": {
+        "realization": "index.html",
+        "httpMethod": "GET",
+        "type": "UVE"
+      },
+      "student/update": {
+        "realization": "api/controllers/StudentController.update",
+        "httpMethod": "POST",
+        "type": "CMD"
+      },
+      "student/create": {
+        "realization": "api/controllers/StudentController.create",
+        "httpMethod": "POST",
+        "type": "CMD"
+      }
+    }
+  }
+}

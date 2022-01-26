@@ -1,0 +1,70 @@
+{
+  "product": "uu_erasmusg01",
+  "version": "0.1.2-beta",
+  "license": "License Commercial",
+  "description": {
+    "en": "",
+    "cs": ""
+  },
+  "docUri": "",
+  "flsUri": "",
+  "slsUri": "",
+  "imageUri": "",
+  "devkit": {
+    "development": {
+      "appBoxLocationUri": "ues:UCL-BT:OPR.RSP/APPBOXES",
+      "appDeploymentUri": "ues:UCL-BT[118500965363973101]:UUN_STUDENTS01_AWE[5f9fea37f439f9fab6743983]:UU.ERASMUSG01[61e5572f6484a707e92f4c34]",
+      "resourcePoolUri": "ues:UCL-BT:UUN_STUDENTS01_AWE"
+    }
+  },
+  "uu_erasmusg01": {
+    "namespace": "UuErasmus",
+    "sourceUri": "https://cdn.plus4u.net/uu-erasmusg01/%s/uu_erasmusg01.min.js",
+    "componentList": [
+      {
+        "code": "UuErasmus.Bricks.Tracker",
+        "name": "Tracker",
+        "tagList": [
+          "UuErasmus",
+          "Bricks",
+          "Tracker"
+        ],
+        "docCode": "UuErasmusBricksTracker",
+        "desc": "",
+        "icon": "",
+        "imageUri": "",
+        "uuEccReady": false,
+        "template": "<UuErasmus.Bricks.Tracker />"
+      },
+      {
+        "code": "UuErasmus.Bricks.CreateApplication",
+        "name": "CreateApplication",
+        "tagList": [
+          "UuErasmus",
+          "Bricks",
+          "CreateApplication"
+        ],
+        "docCode": "UuErasmusBricksCreateApplication",
+        "desc": "",
+        "icon": "",
+        "imageUri": "",
+        "uuEccReady": false,
+        "template": "<UuErasmus.Bricks.CreateApplication />"
+      },
+      {
+        "code": "UuErasmus.Test",
+        "name": "Test",
+        "tagList": [
+          "UuErasmus",
+          "Test"
+        ],
+        "docCode": "UuErasmusTest",
+        "desc": "",
+        "icon": "",
+        "imageUri": "",
+        "uuEccReady": false,
+        "template": "<UuErasmus.Test />"
+      }
+    ]
+  }
+}
