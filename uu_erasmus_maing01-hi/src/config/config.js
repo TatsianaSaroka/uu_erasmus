@@ -4,7 +4,6 @@ import UU5 from "uu5g04";
 
 const TAG = "UuErasmus.";
 
-
 export default {
   TAG,
   Css: UU5.Common.Css.createCssModule(
