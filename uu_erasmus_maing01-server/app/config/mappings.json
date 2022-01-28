@@ -25,6 +25,11 @@
         "realization": "api/controllers/StudentController.create",
         "httpMethod": "POST",
         "type": "CMD"
+      },
+      "student/get": {
+        "realization": "api/controllers/StudentController.get",
+        "httpMethod": "GET",
+        "type": "CMD"
       }
     }
   }

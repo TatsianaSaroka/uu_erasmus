@@ -5,6 +5,8 @@
   "license": "License Commercial",
   "spec": "nodejs-app; uu_appg01_devkit@4.7.0",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
     "uu_appg01_server": "^5.0.0",
     "uu_apprepresentationg01": "^2.0.0"
   },
