@@ -28,6 +28,10 @@
       "erasmusMain/load": {
         "sysStateList": ["active"],
         "profileList": ["Public","AwidLicenseOwner","Authorities"]
+      },
+      "student/get": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
       }
     }
   }
