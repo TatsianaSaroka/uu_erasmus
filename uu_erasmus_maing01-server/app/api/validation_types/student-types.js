@@ -3,6 +3,10 @@ const studentCreateDtoInType = shape({
     fullName: string(500)
 })
 
+const studentGetDtoInType = shape({
+    id: uu5String()
+})
+
 const studentUpdateDtoInType = shape({
     id: uu5String().isRequired(),
     currentSemester: oneOf(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]),

@@ -39,7 +39,26 @@ const Create = {
   }
 };
 
+const Get = {
+  UC_CODE: `${STUDENT_ERROR_PREFIX}get/`,
+  InvalidDtoIn: class extends ErasmusMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Get.UC_CODE}invalidDtoIn`;
+      this.message = "DtoIn is not valid.";
+    }
+  },
+  StudentDaoGetFailed: class extends ErasmusMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Get.UC_CODE}studentDaoGetFailed`;
+      this.message = "Get student by id Dao get failed.";
+    }
+  }
+};
+
 module.exports = {
+  Get,
   Create,
   Update
 };

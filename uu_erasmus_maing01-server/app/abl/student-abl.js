@@ -12,6 +12,9 @@ const WARNINGS = {
     createUnsupportedKeys: {
       code: `${Errors.Update.UC_CODE}unsupportedKeys`,
     },
+    getUnsupportedKeys: {
+      code: `${Errors.Update.UC_CODE}unsupportedKeys`,
+    },
 };
 
 class StudentAbl {
@@ -19,6 +22,26 @@ class StudentAbl {
   constructor() {
     this.validator = Validator.load();
     this.dao = DaoFactory.getDao("student");
+  }
+
+  async get(awid, dtoIn) {
+    let validationResult = this.validator.validate("studentGetDtoInType", dtoIn);
+    // hds 2.2, 2.3, A4, A5
+    let uuAppErrorMap = ValidationHelper.processValidationResult(
+      dtoIn,
+      validationResult,
+      WARNINGS.getUnsupportedKeys.code,
+      Errors.Get.InvalidDtoIn
+    );
+    //dtoIn.uuIdentity = session.getIdentity().getUuIdentity();
+    // hds 3
+    let student = await this.dao.get(awid, dtoIn.id);
+    if (!student) {
+      throw new Errors.Get.StudentDaoGetFailed(uuAppErrorMap, { dataId: dtoIn.id });
+    }
+    // hds 4
+    student.uuAppErrorMap = uuAppErrorMap;
+    return student;
   }
 
   async create(awid, dtoIn) {
